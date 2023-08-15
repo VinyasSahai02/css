@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <!-- how to use internal css -->
+    <style>
+        h1{
+            color: green;
+            font-size: 3rem;
+        }
+    </style>
+
+    <!-- how to use external css -->
+    <link rel="stylesheet" href="./styles1.css">
+</head>
+<body>
+    <!-- internal css -->
+    <h1 >hello world</h1>
+    <!-- external css -->
+    <h2>hello people</h2>
+    <br>
+
+    <!-- start using element selectors -->
+    <h1 style="color: pink;">hello world</h1>
+    <!-- inline css -->
+    <h2>hello people</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat totam rem dolore exercitationem, incidunt porro maiores sit odio est perspiciatis? Quasi at consequuntur magni molestias possimus perspiciatis saepe? Adipisci, consequatur?</p>
+    <br>
+
+    <!-- using ID's -->
+    <h1 id="heading">title heading</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum explicabo, ut laudantium rem dolores. Facere nostrum id nihil sapiente vero voluptas, molestias iste vel! Culpa, commodi. Delectus, debitis exercitationem.</p>
+    <h1 id="subheading">footer heading</h1>
+    <br>
+
+    <!-- using class selectors -->
+    <h3 id="title" class="green lowercase">iam green</h3>
+    <h3 class="red">iam red</h3>
+    <h3 class="green">iam green</h3>
+    <h3 class="red lowercase">iam red</h3>
+    <h3 class="green">iam green</h3>
+    <h3 class="red">iam red</h3>
+    <!-- ID's should be unique whereas class can be same  -->
+    <br>
+    <!-- using DIV and SPAN -->
+    <div>
+    <h3>heading no. 1</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est numquam neque sapiente corporis, rem nemo debitis iste optio esse temporibus!</p>
+    </div>
+
+    <div class="green">
+    <h3>heading no. 2</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    <span class="red">
+        iam uppercase
+    </span> iam uppercase Est numquam neque sapiente corporis,
+    <span>
+        iam uppercase
+    </span> rem nemo debitis iste
+        optio esse temporibus!</p>
+    </div>
+    <!--div is used for a block while span is used in btw lines
+    div starts a new line--->
+    <br>
+
+    <!-- inheritence -->
+    <br>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, harum?</p>
+    <p class="red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, harum?</p>
+        <br>
+    
+    <!-- using color properties -->
+    <h3 id="first">iam heading no. 1</h3>
+    <h3 id="second">iam heading no. 2</h3>
+    <h3 id="three">iam heading no. 3</h3>
+    <h3 id="four">iam heading no. 4</h3>
+    <br>
+
+    <!-- fontsize , width , height , background -->
+    <h1 class="normal">units in CSS</h1>
+    <br>
+    
+    <div class="outer">
+        <div class="inner">
+        </div>
+    </div>
+    <br>
+    
+    <h2 class="relative">relative</h2>
+    <h2 class="absolute">absolute</h2>
+    <h2 class="banner"> </h2>
+    <h2 class="header"> </h2>
+    <br>
+    
+    <!-- defaul browser styles and google devtools -->
+    <br>
+
+    <!-- calc() func -->
+    <div class="navbar"></div>
+    <div class="ban"></div>
+    <br>
+
+    <!-- diff text elements  -->
+    <h1 class="stack">main heading</h1>
+    <p class="font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolore, officia aliquid iure sequi quas
+        illum sapiente, est dolorum a reprehenderit velit asperiores, assumenda laborum fugit voluptatibus eos! Nobis,
+        aliquid.</p>
+    <h1 class="gg">main heading two</h1>
+    <br>
+
+    <!-- css box model  -->
+    <h1 class="box">hello i like to learn about css box model</h1>
+    <p class="model">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod a at vero possimus quis repellat, libero
+        nihil. Cumque expedita maiores veritatis, necessitatibus ipsum id aperiam quae quia, consequatur impedit quisquam.
+    </p>
+    <br>
+    
+    <!-- outline and offset -->
+    <div class="bottons">
+        <a href="#" id="nooutline">no outline</a>
+        <a href="#" id="outline">outline</a>
+    </div>
+    <br>
+
+    <!-- dedfault display properties & horizontal centering -->
+    <div class="block">i am a block element</div>
+    <h1 class="block">i am a block element</h1>
+    <p class="block">i am a block element</p>
+    <span class="inline">i am inline element</span>
+    <a href="#" class="inline">i am inline element</a>
+    <img src="photo.jpeg" width="50px" alt="">
+    <!-- mobile navbar example for the above -->
+    <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">products</a></li>
+        <li><a href="#">contact</a></li>
+    </ul>
+    <br>
+    
+    <!-- inline block  -->
+    <a href="">link</a>
+    <a href="">link</a>
+    <a href="">link</a>
+    <a href="">link</a>
+    <br>
+    
+    <!-- border box -->
+    <div class="box-1">
+        <h4>i am with border box</h4>
+    </div>
+    <div class="box-2">
+        <h4>i am normal</h4>
+    </div>
+    <div class="box-3">
+        <h4>i am without border box</h4>
+    </div>
+    <br>
+    
+    <!-- display, opacity and visibility porperties -->
+    <div class="none">none</div>
+    <div class="opacity-1">opacity-0</div>
+    <div class="opacity-5">opacity-1</div>
+    <div class="opacity-0">opacity-5</div>
+    <div class="visibility">visibility</div>
+
+
+
+</body>
+</html>
