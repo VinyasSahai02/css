@@ -1,0 +1,202 @@
+/* BACKGROUND IMAGE PROPERTIES */
+/* repeat, size, position:to postion the img, attachment:see video again for it*/
+/* last rule is important */
+/* div{
+    height: 210px;
+    color: red;
+} */
+.big-img{
+    background: url('./big.jpeg');
+    background-repeat: round; /* prints the whole img irrespective of the size of div, how many times will depend on the space available */
+}
+.small-img{
+    border: 2px solid red;
+    background: url('./small.jpeg');
+    background-repeat: repeat;
+    background-repeat: no-repeat; /*prints the img ony one time*/
+    background-repeat: repeat-y;
+    background-repeat: repeat-x;
+    background-repeat: space;
+
+}
+.folder-img{
+    background:url('./folder.jpeg');
+    background-size: cover; /*covres the whole size of div*/
+    background-size: contain; /*keeps the ratio of the img,how many times will depend on the space available*/
+}
+
+/* LINEAR GRADIENT  */
+/* div{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin: 5px;
+} */
+.one{
+    background: linear-gradient(red,green);
+} 
+.two{
+    background: linear-gradient(to top,red, green,blue);
+}
+.three{
+    background: linear-gradient(150deg,red, green);
+}
+.four{
+    background: linear-gradient(to top left, red, green);
+}
+
+/* div{
+    min-height: 100vh;
+    display: flex;
+    align-items: center; (---shifts text down center)
+    justify-content: center; (---shifts text right center)
+    text-align:center;
+    color: orange;
+} */
+.banner{
+    background: url('./folder.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.header{
+    background: linear-gradient(rgb(253, 252, 252),rgb(12, 12, 12));
+    /* background:url('./folder.jpeg') center/cover no-repeat fixed; */
+}
+
+/* IMP-css linear gradient generator */
+/* use colorzilla for more gradients and just copy the code here  */
+
+
+/* FLOAT  */
+.float{
+    border: 5px solid red;
+    padding: 10px;
+}
+img{
+    float:left;
+}
+.p3{
+    clear:left;
+}
+
+
+/* POSITIONS: static(default), relative, absolute(wach the video again), fixed */
+button{
+    background: red;
+    font-size: 20px;
+    color: white;
+    position: fixed; /*fixes somthing throughout the screen*/
+    top: 95%;
+    right: 0;
+}
+/* div{
+    border: 3px solid red;
+    background: yellow;
+    margin-top: 20px;
+} */
+.p1{
+    background: lightblue;
+    position: relative; /*moves p1 5px from the top and from its relative position*/
+    top: 5px;
+}
+.p2{
+    background: lightgreen;
+}
+.absolute{
+    background: lightcoral;
+    font-size: 20px;
+    position: absolute;
+}
+
+/* MEDIA QUERIES
+responsive design 
+style elements on diff screen sizes
+min-width: ---starting from 
+max-width:---up to 
+mobile first */
+.media{
+    background: blue;
+}
+h1{
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+/* when the screen width changes to >600 background becomes yellow and h1 becomes black */
+@media screen and (min-width:600px){
+    .media{
+        background: yellow;
+    }
+    /* h1{
+        color: black;
+    } */
+}
+/* when the screen width changes to >800 background becomes gray and h1 becomes red and alignes to right */
+@media screen and (min-width:800px) {
+    .media {
+        background: gray;
+    }
+
+    /* h1 {
+        color: red;
+        text-align: right;
+    } */
+}
+/* same for max: width screen size up to 600 or 800 or whatever */
+
+/* Z INDEX --- z-axis
+position:static --- does not work */
+img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.z{
+    margin: 20px;
+    width: 10vw;
+    height: 50vh;
+    border: 5px solid red;
+    position: relative;
+}
+.z1{
+    top: 0;
+    left: 0;
+    z-index: 0; /*default */
+}
+.z2{
+    top: 10%;
+    left: 10%;
+    z-index: 1;
+}
+.z3{
+    top: 20%;
+    left: 20%;
+}
+/* greater the z index more the image will appear closer to us  */
+
+
+/* PSEUDO ELEMENTS ::before ::after content not element
+content:''---required
+img--does not work */
+p::before{
+    content:"hello ";
+    font-weight: bold;
+    font-size: 2rem;
+}
+p::after{
+    content:" after";
+    font-weight: bold;
+    font-size: 2rem;
+}
+/* div{
+    width: 50vw;
+    margin: 100px auto;
+    border: 2px solid red;
+}
+img{
+    width: 100%; 
+    display: block;
+} */
