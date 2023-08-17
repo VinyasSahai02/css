@@ -1,0 +1,67 @@
+/* NOTE= rem values are responsive and px are absolute meaning user can change sixe from devtools for rem  */
+
+/* BASIC SELECTORS */
+/* *{
+    color: RED;
+} */
+#heading{
+    font-size: 40px;
+    text-transform: uppercase;
+    color: blue;
+}
+.heading{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: green;
+}
+.para{
+    letter-spacing: 10px;
+}
+
+/* DESCENDENT AND CHILD COMBINATORS */
+div h1{
+    color: red;
+}
+div > h1{
+    color: blue; /*only direct children affected*/
+}
+
+/* ::first-line ::first-letter */
+P::first-line{
+    font-weight: bold;
+}
+p::first-letter{
+    font-size: 2rem;
+}
+
+/* HOVER  */
+p:hover{
+    color: red;
+}
+.hover:hover{
+    background: blue;
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/* :link :visited :hover :active */
+a:link{
+    color: red; /*all link will have same color*/
+}
+a:visited {
+    color: #00a0ff;
+    /*if click on any link all links will turn red */
+    /*if want a certain link to not change color type a diff href n that link*/
+}
+a:active{
+    color:green; /*hold the left key over the link*/
+}
+
+/* :root element of the document
+html elements
+general styles
+css variables */
+
+
