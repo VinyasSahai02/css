@@ -1,0 +1,169 @@
+/* TRANSFORM= translate(),scale(),rotate(),skew() */
+div{
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+.one{
+    background:red;
+    transform: translate(20px,30px); 
+    /* box moves 20px in x-direc and 30px in y-direc [ctrk+space for more options]*/
+}
+.two{
+    background: green;
+    transform: rotate(135deg); /*rotateZ() works the same way cause rotations os along z-direc */
+}
+.three{
+    background:blue;
+    transform:scale(0.5,0.5) ; /*box becomes half of original in both x and y direc */
+    transform: skew(30deg);
+}
+
+/* TRANSITION= change over time transition-property;
+transition-duration: 
+transition-delay*/
+div:hover{
+    background:grey;
+}
+.trans2:hover{
+    border-radius: 50%;
+}
+.trans1{
+    background: red;
+    transition: background 3s 2s, border-radius 5s 1s;
+    /* transition:all 4s 5s; ---even more shortcut */
+}
+.trans2{
+    background: blue;
+    transition-property: background,border-radius;
+    transition-duration: 4s,5s;
+    transition-delay: 3s
+}
+
+/* TRANSITION-TIMING= watch video */
+
+/* ANIMATION = 0 1% 2% ...100%
+transition= 0 to 100 */
+.transition:hover{
+    transform: translateX(100px);
+}
+.transition{
+    background: red;
+    transition: all 2s linear
+}
+.animation{
+    background: blue;
+    animation: move 10s infinite; 
+    /*animation-name,duration,iteration(animation runs infinite times) */
+}
+@keyframes move {
+    0%{
+        transform:translateX(20px);
+    }
+    50%{
+        transform:translateX(100px);
+        background: red;
+    }
+    75%{
+        transform: translateX(-100px);
+        background: green;
+    }
+    100%{
+        transform: translateX(20px);
+    }
+}
+
+/* ANIMATION-FILL-MODE= what values are applied by the animation outside the time it is executing */
+.fillmode{
+    background:green;
+    animation: fill 10s 2;
+    animation-fill-mode: forwards; /*when the animation is completed it remains the way it is at 100% rather than returning to the way is was at 0% */
+}
+@keyframes fill {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        transform: translateX(200px);
+        opacity: 0.25;
+    }
+    50%{
+        transform: translateX(-100px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(20px);
+        opacity: 0.5;
+    }
+}
+
+/* CSS VARIABLES AKA custom properties
+hold a value and reuse it 
+--varName:Name 
+property:var(--varName)
+:root{} ===global
+element=== :local 
+any property */
+/* .heading{
+    color: orangered;
+}
+.text{
+    color: limegreen;
+}
+.main-text{
+    color: blue;
+}
+.second-heading{
+    color: orangered;
+} */
+
+:root{
+    --primarycolor: #1313fa;
+    --secondarycolor:#f15025;
+    --mainTransition:all 0.4 linear;
+}
+.heading{
+    color: var(--primarycolor);
+}
+.second-heading {
+    color: var(--primarycolor);
+    transition: var(--mainTransition);
+}
+.second-heading:hover{
+    color: var(--secondarycolor);
+}
+.main{
+    --primaryRed:red;
+}
+.main-text{
+    color: var(--primaryRed);
+}
+.third-heading{
+    color: var(--primaryRed);
+}
+
+/* ICONS
+Font-Awesome-Icons */
+.fa-home{
+    color: green;
+}
+.social-icon{
+    font-size: 4rem;
+    color: blue;
+}
+
+
+/* TEXT SHADOW 
+BOX SHADOW  */
+h2{
+    text-shadow: 2px 2px 6px red; /*(x-axis,y-axis,amount of blur,color) */
+}
+.box{
+    background: blue;
+    margin: 20px;
+    box-shadow: 5px 10px 5px green;
+}
+/* google text shadow generator and box shadow generator */
+
+/* SEMANTIC TAGS */
+/* google to understand better */
